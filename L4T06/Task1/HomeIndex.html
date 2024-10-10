@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form action="user.php" method="post">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required><br>
+        <label for="username">Preferred Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br>
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+</html>

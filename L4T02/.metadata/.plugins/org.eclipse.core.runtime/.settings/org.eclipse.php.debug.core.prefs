@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+org.eclipse.php.debug.core.xdebugDebuggerSettingsProvider=<settings><proxyEnable>false</proxyEnable><clientPort>9000</clientPort><ownerId>php-server-fd0818a5-566d-4892-bd37-8392af11b31e</ownerId><proxyIdeKey>ECLIPSE_DBGP_xxx</proxyIdeKey><proxyAddress></proxyAddress></settings>\u0005<settings><proxyEnable>false</proxyEnable><clientPort>9000</clientPort><ownerId>php-exe-fc5e6488-4abf-4793-b45e-8512636cda4f</ownerId><proxyIdeKey>ECLIPSE_DBGP_xxx</proxyIdeKey><proxyAddress></proxyAddress></settings>
+org.eclipse.php.debug.core.zendDebuggerSettingsProvider=<settings><clientIp>192.168.1.84,127.0.0.1</clientIp><clientPort>10137</clientPort><ownerId>php-server-fd0818a5-566d-4892-bd37-8392af11b31e</ownerId><responseTimeout>60000</responseTimeout></settings>\u0005<settings><clientPort>10137</clientPort><ownerId>php-exe-fc5e6488-4abf-4793-b45e-8512636cda4f</ownerId></settings>
+org.eclipse.php.debug.coredefaultPHP=php7
+org.eclipse.php.debug.coreinstalledPHPDebuggers=org.eclipse.php.debug.core.noneDebugger
+org.eclipse.php.debug.coreinstalledPHPInis=null
+org.eclipse.php.debug.coreinstalledPHPLoadIniDefaults=false
+org.eclipse.php.debug.coreinstalledPHPLocations=C\:\\Program Files (x86)\\PHP7\\php.exe
+org.eclipse.php.debug.coreinstalledPHPNames=php7
+org.eclipse.php.debug.coreinstalledPHPUniqueIds=php-exe-fc5e6488-4abf-4793-b45e-8512636cda4f
+org.eclipse.php.debug.corephp_versions=null

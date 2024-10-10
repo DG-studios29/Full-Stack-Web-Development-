@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+    <title>Back to JS Tutorial</title>
+</head>
+<body>
+    <header>
+        <h1>jQuery</h1>
+        <nav>
+            <ul>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="conditional_statements.html">Conditional Statements</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="built_in_functions.html">Built in Functions</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="array_loops.html">Array & Loops</a></li>
+                <!-- Add links for other sections -->
+            </ul>
+        </nav>
+
+        <div class="panel">
+            <h2>jQuery is a fast and lightweight JavaScript library that simplifies tasks like HTML document traversal and manipulation, event handling, and animation. It provides a set of functions and methods to make it easier to work with HTML documents.
+
+                <div class="example">
+                    Functions:
+                    Functions in jQuery are methods or actions that can be performed on HTML elements. Examples include after(), append(), before(), empty(), prepend(), text(), val(), and remove().
+                </div>
+
+                <div class="example">Selectors:
+                        Selectors in jQuery are patterns used to select and manipulate HTML elements. They allow you to target specific elements on a webpage.
+                </div>
+                
+                <div class="example">
+                    Creating and Appending Elements:
+                    jQuery provides functions like after(), append(), before(), and prepend() to manipulate the DOM by creating and adding new elements.
+                    
+                </div>
+               
+                <div class="example"> 
+                    Events in jQuery:
+                    jQuery simplifies event handling. Common events include mouse events (click, double click, mouse enter), keyboard events (key press, key down, key up), and form events (submit, change, blur).
+                </div>
+               
+                <div class="example">
+                    Effect Chaining:
+                    Effect chaining in jQuery allows you to apply multiple effects to an element in a single statement. For example, you can chain effects like hide(), show(), fade(), slide(), animate(), and stop().
+                </div>
+                
+                </h2>
+        </div>
+
+               <!-- jQuery Events Example -->
+                <div id="events">
+                    <h2>jQuery Events Example</h2>
+                    <div id="eventExample">
+                        <button id="clickMe">Click me!</button>
+                    </div>
+                </div>
+
+                <script>
+                     // jQuery Events Example
+                    $(document).ready(function(){
+                        $("#clickMe").click(function(){
+                            alert("You are amazing");
+                        });
+                    });
+                </script>
+        
+    </header>
+    
+    <main>
+        <div class="example">
+            <p1>
+                <h3>Functions:</h3>
+                $(function(){
+                //jQuery events and effects go here
+                );
+                }
+            </p>   
+        </div>
+
+        <div class="example">
+            <p1>
+                <h3>Selector:</h3>
+                $("h1") // element selector
+                $("#mainHeading") // ID selector
+                $(".yellow") // class selector
+                $("*") // selects all HTML elements
+                $(this) // selects current HTML element
+                $("button") // selects button element
+                $("[href]") // selects all link-based elements
+            </p>   
+        </div>
+
+        <div class="example">
+            <p1>
+                <h3>Creating and appending elements:</h3>
+                let newParagraph = $("<p></p>").text("This is a new paragraph.");
+                // creates a new paragraph
+                $("body").append(newParagraph); // appends newParagraph to the end of
+                the body element
+            </p>   
+        </div>
+
+        <div class="example">
+            <p1>
+                <h3>Events and effects:</h3>
+                <p>
+                    $("p").click(function(){
+                        $("this").hide('slow');
+                        });
+                </p>
+                
+            </p>  
+            
+            <div class="panel">
+                <h2>Events in jQuery</h2>
+                    <ul>
+                        <h2>Mouse events:</h2>
+                        <li><a>Click</a></li>
+                        <li><a>Double click</a></li>
+                        <li><a>Mouse enter</a></li>
+                        
+                        <h2>Keyboard events:</h2>
+                        <li><a>Key press</a></li>
+                        <li><a>Key down</a></li>
+                        <li><a>Key up</a></li>
+
+                        <h2>Form events:</h2>
+                        <li><a>Submit</a></li>
+                        <li><a>○ Change</a></li>
+                        <li><a>○ Blur</a></li>
+
+                        
+                    </ul>
+            </div>
+        </div>
+
+        <div class="example">
+            <p1>
+                <h3>Separate Scripting Files:</h3>
+                <img src="img/Screenshot 2024-02-06 195004.png" alt="">
+                
+            </p>   
+        </div>
+
+        <div class="panel">
+            <h2>built-in functions in jQuery</h2>
+                <ul>
+                    <li><a>after() - Inserts content after the selected HTML element</a></li>
+                    <li><a>append() - Inserts content at the end of the selected element</a></li>
+                    <li><a>before() - Inserts content after the selected HTML element</a></li>
+                    <li><a>empty() - Removes the child elements from the selected element, but
+                        not the element itself</a></li>
+                    <li><a>prepend() - Inserts content at the beginning of the selected element</a></li>
+                    <li><a>text() - sets or returns the text content of the selected element</a></li>
+                    <li><a>val() - Sets or returns the value of a form field</a></li>
+                    <li><a>remove() - Removes the selected element, including its child elements</a></li>
+                </ul>
+        </div>
+
+        <div class="example">
+            <p1>
+                <h3>Effect chaining:</h3>
+                l$("button").css("color", "blue").slideDown(500).slideUp(500); // example of
+                effect chaining
+            </p>   
+
+            <h2>Effects in jQuery:</h2>
+            <ul>
+                <li><a>Hide - Hides the selected element</a></li>
+                <li><a>Show - Reveals the selected element</a></li>
+                <li><a>Fade - Fades the element in or out</a></li>
+                <li><a>Slide - Slides the element</a></li>
+                <li><a>Animate - Animates some property of the element</a></li>
+                <li><a>Stop - Stops any effect of an element</a></li>
+        </div>
+        <!-- Main content will be loaded here -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Back to JS Tutorial</p>
+    </footer>
+</body>
+</html>

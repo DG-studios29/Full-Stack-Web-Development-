@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+    <title>Back to JS Tutorial</title>
+</head>
+<body>
+    <header>
+        <h1>Events</h1>
+        <nav>
+            <ul>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="conditional_statements.html">Conditional Statements</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="built_in_functions.html">Built in Functions</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="array_loops.html">Array & Loops</a></li>
+                <li><a href="jquery.html">Jquery</a></li>
+                <!-- Add links for other sections -->
+            </ul>
+        </nav>
+
+        <div class="panel">
+            <h2>Events in web development are actions or occurrences that happen in the browser. In JavaScript, you can use event handlers to respond to these events. The listed events (onchange, onclick, onmouseover, onmouseout, onkeydown, onload) describe different interactions users might have with a webpage.</h2>
+        </div>
+
+        <h2>onkeydown Event Example</h2>
+
+        <div id="message">Press the up arrow key.</div>
+
+        <script>
+            $(document).keydown(function(event) {
+                if (event.keyCode === 38) { // Key code for up arrow key
+                    showMessage();
+                }
+            });
+        
+            function showMessage() {
+                $("#message").text("Up arrow key was pressed!");
+                alert("This is a onkeydown Event");
+            }
+        </script>
+
+    </header>
+    
+    <main>
+        <div class="example">
+            <p1>
+                function closeDoc(){
+                    alert("You are closing this page!");
+                    window.close();
+                    }
+            </p>   
+        </div>
+
+        <div class="panel">
+            <h2>Events in DOM manipulation</h2>
+                <ul>
+                    <li><a>onchange - Some HTML element has been modified</a></li>
+                    <li><a>onclick - An HTML element has been clicked on</a></li>
+                    <li><a>onmouseover - An HTML element was hovered over</a></li>
+                    <li><a>onmouseout - Mouse cursor moves off HTML element</a></li>
+                    <li><a>onkeydown - A keyboard button is pressed</a></li>
+                    <li><a>onload - The HTML page has finished loading</a></li>
+                </ul>
+        </div>
+        <!-- Main content will be loaded here -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Back to JS Tutorial</p>
+    </footer>
+</body>
+</html>

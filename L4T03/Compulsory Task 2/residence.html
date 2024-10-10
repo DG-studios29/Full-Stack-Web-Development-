@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Residence</title>
+    <style>
+        input, textarea {
+            margin-top: 12px;
+        }
+        #res_type input {
+            margin-right: 24px;
+        }
+        .space {
+            height: 12px;
+        }
+        label {
+            font-weight: bold;
+        }
+        #res_type label {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+<h1>Please fill in the following details about your place of residence.</h1>
+
+<!-- Residence Details Form -->
+<form action="residence-form-handler.php" method="post">
+    <!-- Full Name -->
+    <label for="fname">Full name:</label>
+    <input type="text" maxlength="35" name="full_name" placeholder="John Doe" id="fname" required>
+
+    <br/>
+    <!-- Address -->
+    <label for="addr">Address:</label>
+    <textarea name="address" id="addr" placeholder="123 Main Rd, Cape Town" maxlength="100" required></textarea>
+
+    <br/>
+    <!-- Number of Floors -->
+    <label for="floors">Floors:</label>
+    <input type="number" name="floors" id="floors" min="1" required>
+
+    <div class="space"></div>
+    <!-- Residence Type -->
+    <label for="res_type">Residence type:</label>
+    <div id="res_type">
+        <label for="res_flat">Apartment</label>
+        <input type="radio" value="flat" id="res_flat" name="residence_type">
+        <label for="res_shared_house">Shared House</label>
+        <input type="radio" value="shared_house" id="res_shared_house" name="residence_type">
+        <label for="res_hostel">Hostel</label>
+        <input type="radio" value="hostel" id="res_hostel" name="residence_type">
+    </div>
+
+    <br/>
+    <!-- Building Colour -->
+    <label for="building_colour">Building colour:</label>
+    <input type="color" name="building_colour" id="building_colour">
+
+    <br/>
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

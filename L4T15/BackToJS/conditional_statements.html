@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+    <title>Back to JS Tutorial</title>
+</head>
+<body>
+    <header>
+        <h1>Conditional Statements</h1>
+
+        <nav>
+            <ul>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="built_in_functions.html">Built in Functions</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="jquery.html">Jquery</a></li>
+                <li><a href="array_loops.html">Array & Loops</a></li>
+                <!-- Add links for other sections -->
+            </ul>
+        </nav>
+
+        <div class="panel">
+            <h2>Conditional statements are used to make decisions in code based on certain conditions. Common conditional statements include if, else if, and else. These statements allow you to execute different blocks of code depending on whether a specified condition evaluates to true or false.</h2>
+        </div>
+
+        <h2>Temperature Checker</h2>
+
+        <p>Enter a temperature:</p>
+        <input type="number" id="temperatureInput">
+        <div class="button1">
+            <button1 onclick="checkTemperature()">Check</button1>
+        </div>
+       
+
+        <p id="result"></p>
+
+        <script>
+            function checkTemperature() {
+                // Get the temperature value from the input field
+                var temperature = document.getElementById("temperatureInput").value;
+            
+                // Check the temperature and display a message based on the condition
+                if (temperature >= 30) {
+                    document.getElementById("result").textContent = "It's hot outside!";
+                } else if (temperature >= 15 && temperature < 30) {
+                    document.getElementById("result").textContent = "It's warm outside.";
+                } else {
+                    document.getElementById("result").textContent = "It's cold outside.";
+                }
+            }
+        </script>
+
+    </header>
+   
+    <main>
+        <!-- Main content will be loaded here -->
+        <div class="example">
+            <p1>
+                if (greeting === "Hello" && question === "What's the time?") {
+                console.log("It is 10 'o'clock.");
+                }
+            </p>    
+            <p>
+                else if (greeting === "Hello" || question === "What is the weather like
+                    tomorrow?") {
+                    console.log("It will be sunny tomorrow.");
+                    }
+            </p> 
+            <p>
+                else {
+                console.log("I don't understand the question.");
+                }
+            </p1>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Back to JS Tutorial</p>
+    </footer>
+</body>
+</html>

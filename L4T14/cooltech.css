@@ -1,0 +1,22 @@
+body {
+    background-color: #172125;
+    color: #FFFFFF;
+     font-family:'YourFontName', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h1 {
+    color: #118AB2;
+}
+
+a {
+    color: #EE6C4D;
+}
+
+
+.listing-text {
+    text-align: right;
+}

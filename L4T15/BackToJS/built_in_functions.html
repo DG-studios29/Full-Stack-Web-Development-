@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+    <title>Back to JS Tutorial</title>
+</head>
+<body>
+    <header>
+        <h1>Built in Functions</h1>
+        <nav>
+            <ul>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="conditional_statements.html">Conditional Statements</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="jquery.html">Jquery</a></li>
+                <li><a href="array_loops.html">Array & Loops</a></li>
+                <!-- Add links for other sections -->
+            </ul>
+        </nav>
+        <div class="panel">
+            <h2>Built-in functions are functions that are provided by the programming language itself. In JavaScript, examples of built-in functions include parseInt() for converting a string to an integer and console.log() for printing messages to the console.</h2>
+        </div>
+
+        <!-- Code Editor -->
+            <div class="codeMirrorContainer">
+                <h2>Built-in Functions Example</h2>
+                <p>Enter an array of numbers separated by commas (e.g., 1, 2, 3):</p>
+                <textarea id="code">[1, 2, 3, 4, 5]</textarea>
+                <button id="runButton" onclick="calculateSum()">Calculate Sum</button>
+                <div id="output"></div>
+            </div>
+            
+            <script>
+                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                    lineNumbers: true,
+                    mode: "javascript"
+                });
+            
+                function calculateSum() {
+                    var code = editor.getValue();
+                    try {
+                        // Convert the input string to an array of numbers
+                        var numbers = JSON.parse("[" + code + "]");
+                        // Use the reduce function to calculate the sum
+                        var sum = numbers.reduce(function (accumulator, currentValue) {
+                            return accumulator + currentValue;
+                        }, 0);
+                        $("#output").text("Sum of the numbers: " + sum);
+                    } catch (error) {
+                        $("#output").text("Error: " + error.message);
+                    }
+                }
+            </script>
+    </header>
+    
+    <main>
+        <div class="example">
+            <p1>
+                function doubleNumber(number) {
+                return number * 2;
+                }
+                console.log(doubleNumber(10)); // outputs 20
+            </p1>
+        </div>
+
+        <div class="panel">
+            <h2>Built-in functions</h2>
+                <ul>
+                    <li><a>charAt() - returns a character in a string at the given index</a></li>
+                    <li><a>indexOf() - returns the index of a the first occurrence of a character in a string</a></li>
+                    <li><a>charCodeAt() - returns the ascii number of the character at the given index in a string</a></li>
+                    <li><a>fromCharCode() - returns the character of the given ascii number</a></li>
+                    <li><a>replace() - replaces a matched substring with a new substring</a></li>
+                    <li><a>split() - splits a string into an array of substrings</a></li>
+                    <li><a>toUpperCase() - returns the given string all in upper case</a></li>
+                    <li><a>toLowerCase() - returns the given string in all lower case</a></li>
+                    <li><a>join() - opposite of split(). Joins all array elements into a string</a></li>
+                    <li><a>pow() - returns a base to the exponent power</a></li>
+                    <li><a>min() - returns the smallest valued element</a></li>
+                    <li><a>max() - returns the largest value element</a></li>
+                    <li><a>round() - returns a number rounded to the nearest integer</a></li>
+                </ul>
+        </div>
+        <!-- Main content will be loaded here -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Back to JS Tutorial</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# Car API
+
+## Testing with Postman
+
+### GET all cars
+- Method: GET
+- URL: http://localhost:8080/api
+
+### POST a new car
+- Method: POST
+- URL: http://localhost:8080/api
+- Body: JSON format with keys `make`, `model`, `seats` (e.g., `{"make": "Toyota", "model": "Camry", "seats": 4}`)
+
+### DELETE a car by ID
+- Method: DELETE
+- URL: http://localhost:8080/api/{id}
+  - Replace `{id}` with the ID of the car you want to delete
+
+### PUT update a car by ID
+- Method: PUT
+- URL: http://localhost:8080/api/{id}
+  - Replace `{id}` with the ID of the car you want to update
+- Body: JSON format with keys `make`, `model`, `seats` (e.g., `{"model": "Corolla", "seats": 5}`)

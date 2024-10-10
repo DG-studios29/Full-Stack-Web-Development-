@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Space Station Location</title>
+</head>
+<body>
+    <h1>International Space Station Location</h1>
+    <div id="location"></div>
+    <div id="timestamp"></div>
+
+    <script>
+async function fetchISSLocation() {
+    try {
+        const response = await fetch("http://api.open-notify.org/iss-now.json");
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch ISS data");
+        }
+
+        const data = await response.json();
+
+        if (!data || !data.iss_position || !data.timestamp) {
+            throw new Error("Invalid data received from the ISS API");
+        }
+
+        const { latitude, longitude } = data.iss_position;
+        const timestamp = data.timestamp;
+        const time = new Date(timestamp * 1000).toLocaleString();
+
+        if (time === "Invalid Date") {
+            throw new Error("Invalid timestamp received from the ISS API");
+        }
+
+        document.getElementById("location").innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
+        document.getElementById("timestamp").innerText = `Timestamp: ${time}`;
+    } catch (error) {
+        console.log(error);
+        document.getElementById("location").innerText = "Failed to fetch ISS data";
+    }
+}
+
+fetchISSLocation();
+    </script>
+</body>
+</html>

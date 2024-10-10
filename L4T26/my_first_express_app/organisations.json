@@ -1,0 +1,27 @@
+[
+    {
+        "name": "New World Consulting",
+        "email": "hello@newworld.org",
+        "pty_ltd": true
+    },
+    {
+        "name": "Tech Innovators Inc.",
+        "email": "info@techinnovators.com",
+        "pty_ltd": false
+    },
+    {
+        "name": "Global Enterprises Ltd.",
+        "email": "contact@globalenterprises.com",
+        "pty_ltd": true
+    },
+    {
+        "name": "Digital Solutions Group",
+        "email": "support@digitalsolutions.com",
+        "pty_ltd": false
+    },
+    {
+        "name": "Future Trends Corporation",
+        "email": "info@futuretrends.org",
+        "pty_ltd": true
+    }
+]

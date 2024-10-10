@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+    <title>Back to JS Tutorial</title>
+</head>
+<body>
+    <header>
+        <h1>Array Loops</h1>
+        <nav>
+            <ul>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="conditional_statements.html">Conditional Statements</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="jquery.html">Jquery</a></li>
+                <li><a href="built_in_functions.html">Built in Functions</a></li>
+                <!-- Add links for other sections -->
+            </ul>
+        </nav>
+
+        <div class="panel">
+            <h2>An array is a data structure that allows you to store and organize multiple values under a single variable name. Each value in an array is called an element, and each element has a unique index.</h2>
+        </div>
+        <div class="panel">
+            <h2>Loops are structures that allow you to repeat a block of code multiple times. They are useful for iterating over arrays, executing code until a condition is met, or simply running a block of code a certain number of times.</h2>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Main content will be loaded here -->
+        <div class="example">
+            <p1>let classMarks = [62,88,90,70,69,85];
+                for (i=classMarks.length-1; i >= 0; i--) {
+                console.log(classMarks[i]);
+                } // outputs each element reversed
+            </p1>
+        </div>
+        <div class="example">
+            <p1>for (let number of classMarks) {
+                console.log(number);
+                } // outputs each element
+            </p1>
+        </div>
+        <div class="example">
+            <p1>classMarks.forEach(function(number) {
+                console.log(number+2);
+                }); // adds 2 to each number and outputs it
+            </p1>
+        </div>
+        <div class="example">
+            <p1>let counter = 0;
+                let j = 0;
+                while (counter <= 4) {
+                console.log(classMarks[j]);
+                counter ++;
+                j++
+                } // outputs the first 5 elements in the array
+            </p1>
+        </div>
+
+        <div class="panel">
+            <h2>Array Methods</h2>
+                <ul>
+                    <li><a>indexOf() - Searches the array for the given element and returns its position</a></li>
+                    <li><a>includes() - Checks if the array contains a given element</a></li>
+                    <li><a>remove() - Removes an item from the list</a></li>
+                    <li><a>pop() - Removes the last element in the array</a></li>
+                    <li><a>push() - Adds an element to the end of the array and returns the new length</a></li>
+                    <li><a>shift() - Removes the first element in the array</a></li>
+                    <li><a>sort() - Sorts elements in the array in ascending order</a></li>
+                    <li><a>splice() - Adds or removes elements in an array</a></li>
+                    <li><a>reverse() - Reverses the order of elements in the array</a></li>
+                </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Back to JS Tutorial</p>
+    </footer>
+</body>
+</html>

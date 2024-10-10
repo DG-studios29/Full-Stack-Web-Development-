@@ -1,0 +1,3 @@
+defaultPHPServer=PHP Built-in Server at localhost
+eclipse.preferences.version=1
+phpServers=<server><name>PHP Built-in Server at localhost</name><base_url>http\://localhost</base_url><hostname>localhost</hostname><id>php-server-fd0818a5-566d-4892-bd37-8392af11b31e</id><port>8841</port><debuggerId>org.eclipse.php.debug.core.noneDebugger</debuggerId></server>

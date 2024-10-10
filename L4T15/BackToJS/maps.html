@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+    <title>Back to JS Tutorial</title>
+</head>
+<body>
+    <header>
+        <h1>Maps</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="conditional_statements.html">Conditional Statements</a></li>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="built_in_functions.html">Built in Functions</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="jquery.html">Jquery</a></li>
+                <li><a href="array_loops.html">Array & Loops</a></li>
+                <!-- Add links for other sections -->
+            </ul>
+        </nav>
+
+        <div class="panel">
+            <h2>In JavaScript, a map is a collection of key-value pairs. It allows you to store and retrieve data using keys. Maps are useful when you need to associate data with specific identifiers.</h2>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Main content will be loaded here -->
+        <div class="example">
+            <p1>
+                let teachers = new Map();
+                teachers.set("grade 1", "Mrs Johnson");
+                teachers.set("grade 2", "Mr Bennett");
+                for (let [key, value] of teachers) {
+                console.log(key + ' = ' + value);
+                }
+                // grade 1 = Mrs Johnson
+                // grade 2 = Mr Bennett
+            </p1>
+        </div>
+        <div class="example">
+            <p>
+                (let key of teachers.keys()) {
+                    console.log(key);
+                    }
+                    // grade 1
+                    // grade 2
+                    for (let value of teachers.values()) {
+                    console.log(value);
+                    }
+                    // Mrs Johnson
+                    // Mr Bennett   
+            </p> 
+        </div>
+        <div class="example">
+            <p>
+                for (let [key, value] of teachers.entries()) {
+                console.log(`The ${key} teacher is ${value}.`);
+                }
+                // grade 1 = Mrs Johnson
+                // grade 2 = Mr Bennett
+            </p1>
+        </div>
+        <div class="panel">
+            <h2>Map Methods</h2>
+                <ul>
+                    <li><a>has() - checks to see if a key exists in the map and returns a boolean.</a></li>
+                    <li><a>get() - returns the value of the given key.</a></li>
+                    <li><a>delete() - deletes the given key-value pair from the map.</a></li>
+                    <li><a>clear() - removes all key-value pairs in a map.</a></li>
+                </ul>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Back to JS Tutorial</p>
+    </footer>
+</body>
+</html>

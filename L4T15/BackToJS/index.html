@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+    <title>Back to JS Tutorial</title>
+</head>
+<body>
+    <header>
+        <h1>Back to JS Tutorial</h1>
+        <nav>
+            <ul>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="conditional_statements.html">Conditional Statements</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="array_loops.html">Array & Loops</a></li>
+                <li><a href="built_in_functions.html">Built in Functions</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="jquery.html">Jquery</a></li>
+                <!-- Add links for other sections -->
+            </ul>
+        </nav>
+        <div class= "panel">
+            <h2>JavaScript, often abbreviated as JS, is a high-level, versatile, and interpreted programming language primarily used for creating dynamic content on the web. It allows developers to add interactivity, manipulate the Document Object Model (DOM), and update the content of a webpage dynamically. JavaScript is commonly employed in conjunction with HTML and CSS to build modern, interactive web applications.</h2>
+        </div>
+    </header>
+    <ul>
+        <li><a>Client-Side Scripting: JavaScript is mainly executed on the client's browser, providing the ability to modify the content of a webpage after it has been loaded.</a></li>
+
+        <li><a>Object-Oriented: JavaScript is an object-oriented language, meaning it uses objects to represent and manipulate data. This enables developers to organize code in a modular and reusable manner.</a></li>
+        
+        <li><a>Event-Driven Programming: JavaScript is event-driven, responding to events such as user actions (clicks, keypresses) or changes in the browser environment. This allows developers to create responsive and interactive user interfaces.</a></li>
+        
+        <li><a>Cross-Browser Compatibility: JavaScript is supported by all major web browsers, making it a cross-browser scripting language.</a></li>
+        
+        <li><a>Asynchronous Programming: JavaScript supports asynchronous programming, which allows certain operations to occur independently of the main program flow. This is crucial for handling tasks such as fetching data from a server without freezing the user interface.</a></li>
+        
+        <li><a>Extensibility: JavaScript can be extended through the use of libraries and frameworks. Popular JavaScript libraries include jQuery, and frameworks such as React, Angular, and Vue.js are widely used for building scalable and maintainable web applications.</a></li>
+    </ul>
+   
+   
+    <main>
+        <div class= "panel">
+            <h2>JavaScript plays a fundamental role in web development and is an essential skill for front-end developers. Over the years, it has evolved and expanded its reach beyond the browser, finding applications in server-side development (Node.js) and even in mobile app development</h2>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz">
+            <h2>Quiz</h2>
+            <div id="question1">
+                <p>What is the capital of France?</p>
+                <input type="radio" name="q1" value="paris"> Paris<br>
+                <input type="radio" name="q1" value="london"> London<br>
+                <input type="radio" name="q1" value="berlin"> Berlin<br>
+                <button onclick="checkAnswer('q1')">Submit</button>
+                <p id="answer1"></p>
+            </div>
+        </div>
+        
+        <div id="codeEditor">
+            <textarea id="code"></textarea>
+            <button onclick="runCode()">Run</button>
+            <div id="output"></div>
+        </div>
+
+        <script>
+                     // Code Editor functionality
+            var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                lineNumbers: true,
+                mode: "javascript"
+            });
+        
+            function runCode() {
+                var code = editor.getValue();
+                try {
+                    var result = eval(code);
+                    $("#output").text(result);
+                } catch (error) {
+                    $("#output").text(error.message);
+                }
+            }
+        </script>
+
+        <script>
+            // Quiz functionality
+            function checkAnswer(questionId) {
+                var selectedAnswer = $("input[name='" + questionId + "']:checked").val();
+                var correctAnswer = "paris"; // Correct answer for question 1
+                var answerText = selectedAnswer === correctAnswer ? "Correct!" : "Incorrect! The correct answer is Paris.";
+                $("#answer1").text(answerText);
+            }
+        </script>
+        
+        <!-- Main content will be loaded here -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Back to JS Tutorial</p>
+    </footer>
+</body>
+</html>

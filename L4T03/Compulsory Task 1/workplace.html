@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workplace Information Form</title>
+    <style>
+        .err {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<form action="workplace-form-handler.php" method="POST">
+    <label for="full_name">Full Name:</label>
+    <input type="text" id="full_name" name="full_name" required>
+    
+    <label for="work_place">Workplace:</label>
+    <input type="text" id="work_place" name="work_place" required>
+    
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required>
+    
+    <label for="hourly_wage">Hourly Wage:</label>
+    <input type="number" id="hourly_wage" name="hourly_wage" required>
+    
+    <label for="job_start_date">Job Start Date:</label>
+    <input type="date" id="job_start_date" name="job_start_date" required>
+    
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
